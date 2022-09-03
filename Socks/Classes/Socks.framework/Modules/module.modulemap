@@ -1,0 +1,6 @@
+framework module Socks {
+  umbrella header "Socks.h"
+
+  export *
+  module * { export * }
+}

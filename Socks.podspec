@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Socks'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of Socks.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,9 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'Socks/Classes/**/*'
+  s.vendored_frameworks = ['Socks/Classes/Socks.framework']
+  s.pod_target_xcconfig = {'VALID_ARCHS' => 'x86_64 armv7 arm64'}
+  s.source_files = 'Socks/Classes/Socks.framework/Headers/*.{h,m}'
   
   # s.resource_bundles = {
   #   'Socks' => ['Socks/Assets/*.png']
